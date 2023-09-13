@@ -1,0 +1,22 @@
+{
+  "name": "typescript-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/app.js",
+    "start": "concurrently npm:start:*"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hisanibrahim/typescript-playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hisanibrahim/typescript-playground/issues"
+  },
+  "homepage": "https://github.com/hisanibrahim/typescript-playground#readme"
+}
