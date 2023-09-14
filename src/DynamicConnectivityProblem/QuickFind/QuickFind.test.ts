@@ -13,4 +13,13 @@ describe("QuickFind class tests", () => {
   it("Should 0 and 9 not connected", () => {
     expect(qf.connected(0, 9)).to.be.false;
   });
+  it("Should connect 0 and 9", () => {
+    qf.union(0, 9);
+    expect(qf.connected(0, 9)).to.be.true;
+  });
+  it("Should connect (4, 3) (3, 8)", () => {
+    qf.union(4, 3);
+    qf.union(3, 8);
+    expect(qf.connected(4, 8)).to.be.true;
+  });
 });
