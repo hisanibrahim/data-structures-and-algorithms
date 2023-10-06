@@ -1,4 +1,4 @@
-import UnionFind from "../UnionFind/UnionFind";
+import UnionFind from "../UnionFind";
 
 class QuickUnion extends UnionFind {}
 

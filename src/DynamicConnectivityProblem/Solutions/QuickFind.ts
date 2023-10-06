@@ -1,4 +1,4 @@
-import UnionFind from "../UnionFind/UnionFind";
+import UnionFind from "../UnionFind";
 
 class QuickFind extends UnionFind {
   public connected(p: number, q: number): boolean {

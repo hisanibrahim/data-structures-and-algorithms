@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import UnionFind from "./UnionFind";
+import UnionFind from ".";
 
 describe("UnionFind class tests", () => {
   it("Should create an instance of UnionFind", () => {
