@@ -6,14 +6,12 @@ class QuickFind extends UnionFind {
     // If both IDs are same, it means both connected
   }
   public union(p: number, q: number): void {
-    if (!(p < this.N && q < this.N)) console.log("Out of bound Error");
-    else
-      this.id = this.id.map((x) => {
-        return x === this.id[p] ? this.id[q] : x;
-        // Look through each item in the ID Array
-        // If item equals to the ID of first argument, then replaces with ID of second argument
-        // Else it remains same
-      });
+    this.id = this.id.map((x) => {
+      return x === this.id[p] ? this.id[q] : x;
+      // Look through each item in the ID Array
+      // If item equals to the ID of first argument, then replaces with ID of second argument
+      // Else it remains same
+    });
   }
 }
 

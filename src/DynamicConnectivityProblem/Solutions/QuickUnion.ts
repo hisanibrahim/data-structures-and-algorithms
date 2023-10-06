@@ -6,6 +6,8 @@ class QuickUnion extends UnionFind {
     while (this.id[j] != j) {
       j = this.id[j];
     }
+    // Find root by iterating through parents
+    // If index and value is same, then it is root
     return j;
   }
   public connected(p: number, q: number): boolean {
@@ -17,7 +19,7 @@ class QuickUnion extends UnionFind {
     const rootQ = this.root(q);
     this.id[rootP] = rootQ;
     // Find root of p
-    // Set its root as root of q
+    // Set its root = root of q
   }
 }
 
