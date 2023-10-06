@@ -10,7 +10,7 @@ import QuickUnion from "./QuickUnion";
       assert(qf instanceof Class);
     });
     it("Should ID Array to have all members", () => {
-      expect(qf.idArr).to.have.all.members(testArr);
+      expect(qf.id).to.have.all.members(testArr);
     });
     it("Should 0 and 9 not connected", () => {
       expect(qf.connected(0, 9)).to.be.false;
