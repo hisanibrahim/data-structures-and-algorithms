@@ -7,7 +7,8 @@
     "start:build": "tsc -w",
     "start:run": "nodemon build/app.js",
     "start": "concurrently npm:start:*",
-    "test": "nyc --reporter=html mocha --require ts-node/register src/**/*.test.ts --recursive"
+    "test": "mocha --require ts-node/register src/**/*.test.ts --recursive",
+    "coverage": "nyc --reporter=html --check-coverage=true npm test"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "@types/chai": "^4.3.6",
     "@types/mocha": "^10.0.1",
     "chai": "^4.3.8",
+    "codecov": "^3.8.3",
     "mocha": "^10.2.0",
     "nyc": "^15.1.0",
     "ts-node": "^10.9.1"
