@@ -7,7 +7,7 @@
     "start:build": "tsc -w",
     "start:run": "nodemon build/app.js",
     "start": "concurrently npm:start:*",
-    "test": "nyc --reporter=html --check-coverage=true mocha --require ts-node/register src/**/*.test.ts --recursive"
+    "test": "nyc --reporter=html --reporter=lcov --check-coverage=true mocha --require ts-node/register src/**/*.test.ts --recursive"
   },
   "repository": {
     "type": "git",
