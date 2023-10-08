@@ -13,17 +13,32 @@ import QuickUnionImproved from "./QuickUnionImproved";
     it("Should ID Array to have all members", () => {
       expect(qf.id).to.have.all.members(testArr);
     });
-    it("Should 0 and 9 not connected", () => {
-      expect(qf.connected(0, 9)).to.be.false;
+    it("Should 4 and 3 not connected", () => {
+      expect(qf.connected(4, 3)).to.be.false;
     });
-    it("Should connect 0 and 9", () => {
-      qf.union(0, 9);
-      expect(qf.connected(0, 9)).to.be.true;
-    });
-    it("Should connect (4, 3) (3, 8)", () => {
+    it("Should connect 4 and 3", () => {
       qf.union(4, 3);
+      expect(qf.connected(4, 3)).to.be.true;
+    });
+    it("Should connect (3, 8) (6, 5) (9, 4) (2, 1) (5, 0) (7, 2) (6, 1) (7, 3) (9, 1)", () => {
       qf.union(3, 8);
-      expect(qf.connected(4, 8)).to.be.true;
+      qf.union(6, 5);
+      qf.union(9, 4);
+      qf.union(2, 1);
+      qf.union(5, 0);
+      qf.union(7, 2);
+      qf.union(6, 1);
+      qf.union(7, 3);
+      qf.union(9, 1);
+      expect(qf.connected(3, 8)).to.be.true;
+      expect(qf.connected(6, 5)).to.be.true;
+      expect(qf.connected(9, 4)).to.be.true;
+      expect(qf.connected(2, 1)).to.be.true;
+      expect(qf.connected(5, 0)).to.be.true;
+      expect(qf.connected(7, 2)).to.be.true;
+      expect(qf.connected(6, 1)).to.be.true;
+      expect(qf.connected(7, 3)).to.be.true;
+      expect(qf.connected(9, 1)).to.be.true;
     });
   });
 });

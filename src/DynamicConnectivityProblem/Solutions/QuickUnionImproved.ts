@@ -4,6 +4,14 @@ class QuickUnionImproved extends QuickUnion {
   // Maintain a size array to count number of objects in the tree rooted at i
   protected size: number[] = [];
 
+  constructor(N: number) {
+    super(N);
+    // Initialize values of size array as 1
+    for (let i = 0; i < N; i++) {
+      this.size[i] = 1;
+    }
+  }
+
   protected root(i: number): number {
     let j = i;
     // Find root by iterating through parents
