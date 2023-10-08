@@ -1,25 +1,15 @@
-// 1–2
-// 3–4
-// 5–6
-// 7–8
-// 7–9
-// 2–8
-// 0–5
-// 1–9
+### M union-find operations on a set of N objects
 
-// 1–2
-// 1–9
-// 7–9
-// 7–8
-// 2–8
+| algorithm                      | worst-case time |
+| ------------------------------ | --------------- |
+| quick-find                     | M N             |
+| quick-union                    | M N             |
+| weighted QU                    | N + M log N     |
+| QU + path compression          | N + M log N     |
+| weighted QU + path compression | N + M lg\* N    |
 
-// { 1, 2, 9, 7, 8 }
+##### Ex. [109 unions and finds with 109 objects]
 
-// 3–4
-
-// { 3, 4 }
-
-// 5–6
-// 0–5
-
-// { 5, 6, 0}
+- WQUPC reduces time from 30 years to 6 seconds.
+- Supercomputer won't help much; good algorithm enables solution.
+  45
