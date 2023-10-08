@@ -1,7 +1,7 @@
 import UnionFind from "../UnionFind";
 
 class QuickUnion extends UnionFind {
-  private root(i: number): number {
+  protected root(i: number): number {
     let j = i;
     while (this.id[j] != j) {
       j = this.id[j];

@@ -1,8 +1,9 @@
 import { assert, expect } from "chai";
 import QuickFind from "./QuickFind";
 import QuickUnion from "./QuickUnion";
+import QuickUnionImproved from "./QuickUnionImproved";
 
-[QuickFind, QuickUnion].forEach((Class) => {
+[QuickFind, QuickUnion, QuickUnionImproved].forEach((Class) => {
   describe(`${Class.name} class tests`, () => {
     const qf = new Class(10);
     const testArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
