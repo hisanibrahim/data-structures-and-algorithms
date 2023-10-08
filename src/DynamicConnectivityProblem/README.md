@@ -12,4 +12,3 @@
 
 - WQUPC reduces time from 30 years to 6 seconds.
 - Supercomputer won't help much; good algorithm enables solution.
-  45
