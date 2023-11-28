@@ -4,6 +4,7 @@ import QuickUnion from "./QuickUnion";
 import QuickUnionImproved from "./QuickUnionImproved";
 
 [QuickFind, QuickUnion, QuickUnionImproved].forEach((Class) => {
+  const start = global.performance.now();
   describe(`${Class.name} class tests`, () => {
     const qf = new Class(10);
     const testArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -41,4 +42,6 @@ import QuickUnionImproved from "./QuickUnionImproved";
       expect(qf.connected(9, 1)).to.be.true;
     });
   });
+  const timeTaken = global.performance.now() - start;
+  console.log(timeTaken);
 });
