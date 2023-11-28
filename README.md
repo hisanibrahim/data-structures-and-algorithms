@@ -66,3 +66,17 @@ Typically, better order of growth ⇒ faster in practice.
 - Big Theta Notation`Θ(N)`
 
 ### Memory Requirments
+
+#### Typical memoru usage
+
+Total memory usage for a data type value:
+・Primitive type: 4 bytes for int, 8 bytes for double, …
+・Object reference: 8 bytes.
+・Array: 24 bytes + memory for each array entry.
+・Object: 16 bytes + memory for each instance variable
+
+- 8 bytes if inner class (for pointer to enclosing class).
+  ・Padding: round up to multiple of 8 bytes.
+  Shallow memory usage: Don't count referenced objects.
+  Deep memory usage: If array entry or instance variable is a reference,
+  add memory (recursively) for referenced object.
